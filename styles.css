@@ -1,0 +1,294 @@
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    background-color: #f2f2f2;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка и навигация */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #004080;
+}
+
+/* Герой-секция */
+.hero {
+    background: url('banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #004080;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Грузоперевозки по Европе */
+.europe-delivery {
+    padding: 80px 0;
+    background-color: #f4f7fb;
+}
+
+.europe-delivery .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.europe-delivery .text h2 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.europe-delivery .text button {
+    padding: 10px 24px;
+    border: 2px solid #004080;
+    background-color: transparent;
+    color: #004080;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.europe-delivery .text button:hover {
+    background-color: #004080;
+    color: white;
+}
+
+.europe-delivery img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Услуги */
+.services {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #004080;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: #004080;
+    color: white;
+    padding: 30px 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.3s;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    background-color: #007acc;
+}
+
+.service i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* О компании */
+.about {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f4f7fb;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #444;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.stat span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #004080;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Карта */
+.map img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Подвал */
+.footer {
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacts p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Тёмная тема */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .header,
+.dark-theme .services,
+.dark-theme .footer,
+.dark-theme .europe-delivery,
+.dark-theme .about {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-theme .nav a {
+    color: #e0e0e0;
+}
+
+.dark-theme .nav a:hover {
+    color: #f9d342;
+}
+
+.dark-theme .service {
+    background-color: #2a2a2a;
+}
+
+.dark-theme .service:hover {
+    background-color: #3b3b3b;
+}
+
+.dark-theme .text button {
+    background-color: #333;
+    border-color: #555;
+    color: #f0f0f0;
+}
+
+.dark-theme .text button:hover {
+    background-color: #555;
+}
+
+.dark-theme .stat span {
+    color: #f9d342;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+    transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
